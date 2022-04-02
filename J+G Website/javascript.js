@@ -7,6 +7,6 @@ function add_numbers(){
     var output = num1+num2;
 
     var output_string;
-    output_string = "The sum of " + num1 + " and " + num2 " is " + output;
+    output_string = "The sum of " + num1 + " and " + num2 + " is " + output;
     // Set output label text to output_string here
 }
