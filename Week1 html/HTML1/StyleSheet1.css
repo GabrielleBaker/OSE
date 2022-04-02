@@ -1,0 +1,22 @@
+
+body{
+    color: rgb(3, 13, 15);
+    padding: 2em;       /* Padding is 2 times the current zoom level font size */
+    
+}
+
+p1{
+    color:rgb(21, 206, 243);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+footer{
+
+}
+
+
+footer{
+    color: rgb(0, 0, 0);
+}
+
+

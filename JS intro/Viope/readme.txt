@@ -1,0 +1,1 @@
+This folder contains exercise files for the OSE course.
