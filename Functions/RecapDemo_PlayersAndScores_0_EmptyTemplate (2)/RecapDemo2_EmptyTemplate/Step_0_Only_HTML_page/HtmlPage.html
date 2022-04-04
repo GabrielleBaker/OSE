@@ -19,12 +19,12 @@
         <input type="text" id="txtScore" />
         <br />
 
-        <input type="submit" value="Add player and clear input fields" />
+        <input type="button" id ="submit" value="Add player and clear input fields" onclick="pushArrays()" />
     </p>
     <hr /> <!-- ----------------------------------------------- -->
 
     <p>
-        <input type="submit" value="List players" />
+        <input type="button" value="List players" onClick="listPlayers()">
     </p>
     <p id="pOutput"></p>
 
@@ -32,19 +32,19 @@
     
     <p>
         <span>Enter the name of the player to search:</span>
-        <input type="text" />
-        <input type="submit" value="Search" />
+        <input type="text" id="inputname"/>
+        <input type="button" value="Search" onClick="Search()">
     </p>
     <p id="pOutput2"></p>
 
     <hr /> <!-- ----------------------------------------------- -->
 
     <p>
-        <input type="submit" value="Find winner" />
+        <input type="button" value="Find winner" onclick="winner()"/>
     </p>
     <p id="pOutput3"></p>
 
     <hr /> <!-- ----------------------------------------------- -->
-
+<script src="player_code.js"></script>
 </body>
 </html>
