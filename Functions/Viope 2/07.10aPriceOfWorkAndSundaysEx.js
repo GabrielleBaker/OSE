@@ -1,37 +1,46 @@
-
-
 function calculate() {
-
-    // Read date text from the input field
-
-    // If it is not Sunday  (Call isSunday() function with a date text as a parameter)
-        //Show price of the repair work per hour during the workdays
-    //otherwise			
-        //Show price of the repair work per hour on Sundays
-
+    //get input from html
+    var dateText = document.getElementById("date").value;
+    //call second function
+    var sunday = isSunday(dateText);
+    var price ;
+    var day;
+    //if sunday is marked true from 2nd function, then give sunday price
+    if(sunday === true){
+        price = 72;
+        day = "(Sunday)";
+    }
+    //else use weekday prices
+    else{
+        price = 48;
+        day = "(Work day).";
+    }
+    //print to html
+    document.getElementById("answer").innerHTML= " <p> Date " + dateText + day + " <br>" + 
+    "The price of this repair work is " + price + " euros per hour.</p>" ;
 }
 
- // The function gets the date text in the format "dd.MM.yyyy". 
- // The function returns Boolean value true if the date is for a Sunday, otherwise false.
+ //second function to figure out day of week
 function isSunday(dateText) {
-	
-	// Split the given dateText into day, month and year parts using the substr() method
-	
+	//takes the day f
+    var day= dateText.substr(0, 2);
+    var month = dateText.substr(3, 2);
+    var year = dateText.substr(6, 4);
 
-	// Create a new Date object to a variable 
-	
+	var asDate = new Date();
+        asDate.setDate(day);
+        asDate.setMonth(month-1);
+        asDate.setFullYear(year);
 
-	// Get the day of the week with its getDay() method. Sunday is number 0 .
-	
+    var dayNow = asDate.getDay();
+    var output ;
 
-	// If day of the week is Sunday 
-	
-		// return Boolean value true
-		
-	// otherwise	
-	
-       // return Boolean value false		
-	
+    if(dayNow === 0){
+        output = true;
+    }
+    else{
+       output =  false;
+    }
+    return output;
+
 }
-
-
