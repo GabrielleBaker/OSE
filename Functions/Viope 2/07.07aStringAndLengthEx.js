@@ -1,15 +1,12 @@
 function processName() {
-
+var name = document.getElementById("name").value;
     // read value of name from the input field
-   
+ var bigName = name.toUpperCase(); 
+ var smallName = name.toLowerCase();
+ var lengthName = name.length;
 
-    // show it with "ALL CAPS" using toUpperCase()
-   
+ document.getElementById("upperCase").innerHTML = "With upper case letters: " + bigName;
+ document.getElementById("lowerCase").innerHTML = "With lower case letters: " + smallName;
+ document.getElementById("length").innerHTML = "Character count: " + lengthName;
 
-    // show it with  "all small letters" using toLowerCase()
- 
-
-    //tell how many characters are there (length, includes also all spaces) 
-   
-   
 }
