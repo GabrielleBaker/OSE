@@ -22,25 +22,26 @@ function calculate() {
 
  //second function to figure out day of week
 function isSunday(dateText) {
-	//takes the day f
+	//takes the day from input text
     var day= dateText.substr(0, 2);
     var month = dateText.substr(3, 2);
     var year = dateText.substr(6, 4);
-
+    //takes input text and creates a date with it
 	var asDate = new Date();
         asDate.setDate(day);
         asDate.setMonth(month-1);
         asDate.setFullYear(year);
-
+    //uses date created to get the day
     var dayNow = asDate.getDay();
     var output ;
-
+    //create boolean to use in function 1
     if(dayNow === 0){
         output = true;
     }
     else{
        output =  false;
     }
+    //return boolean to use in function 1
     return output;
 
 }
