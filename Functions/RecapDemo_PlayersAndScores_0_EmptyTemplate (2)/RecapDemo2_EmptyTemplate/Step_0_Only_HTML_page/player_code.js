@@ -4,7 +4,7 @@ var scores = [];
     //push names and scores into respective arrays
 function pushArrays(){
     names.push(document.getElementById("txtName").value);
-    scores.push(document.getElementById("txtScore").value);
+    scores.push(Number(document.getElementById("txtScore").value));
     //clear input fields 
     txtName.value = "";
     txtScore.value = "";
@@ -29,6 +29,7 @@ function Search(text){
             var name = names[i];
             var score = scores[i];
             var output = "Player: " + name + "<br> Score: " + score;
+            break;
         }
         else{
             output = "Insert a valid name to search the database";
@@ -39,28 +40,34 @@ function Search(text){
 }
 
 function winner(){
-    var currentScore= 0;
-    var tieScore = 0;
-    var nameOfWinner= "";
-    var nameOfTie ="";
     var output;
-    for(i = 0; i < scores.length; i++){
-        if( scores[i] > currentScore && scores[i] > tieScore){
-            currentScore = scores[i];
-            tieScore = 0;
-            nameOfWinner = names[i];
-            nameOfTie = "";
-            output = "The winner is: " + nameOfWinner + "<br> With a score of: " + currentScore;
-        }
-        else if (scores[i] === currentScore){
-            tieScore = scores[i];
-            nameOfTie = names[i];
-            output = "There is a tie. The winners are: " + nameOfWinner + " and " + nameOfTie + 
-            "<br> With scores of: " + currentScore + " and " + tieScore;
-        }
-        else{
-            output = "There is no winner at present";
-        }
+    if(scores.length< 1){
+        output = "Error, no players found";    
     }
+    else{
+    var currentScore= Math.max(...scores);
+    var index = 0;
+
+    while(scores[index] != currentScore){
+        index++;
+    }
+
+    var nameOfWinner= names[index];
+    var tiescore = [currentScore,];
+    var tieplayer =[nameOfWinner,];
+    output = "The winner is: " + nameOfWinner + "<br> With a score of: " + currentScore;
+
+    for(i = index+1; i < scores.length; i++){
+        if( scores[i] === currentScore){
+            tiescore.push(scores[i]);
+            tieplayer.push(names[i]);
+           output = "There is a tie, the winners are: <br>" + "Players: " + tieplayer + 
+           "<br> Scores: " + tiescore;  
+           console.log(tiescore);
+           console.log(tieplayer);
+        }
+        
+    }
+}
     document.getElementById("pOutput3").innerHTML = output;
 }
