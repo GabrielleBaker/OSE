@@ -31,11 +31,13 @@ function showLibraryInfo(jsonText) {
     console.log(libraryObject);
     
     var outputText =
-        libraryObject.items[0].name.en + "<br />" + 
+
+        libraryObject.items[0].name.en + "<br />" +
         libraryObject.items[0].address.street.en + "<br />" +
         libraryObject.items[0].address.zipcode + " " +
-        libraryObject.items[0].address.city.en + "<br /> ";
-    
+        libraryObject.items[0].address.city.en + "<br /> " +
+        libraryObject.items[0].homepage.en + "<br>" ;
+       
         if (libraryObject.items[0].schedules[0].closed === true) {
             outputText += "The library is closed today";
         } else {
