@@ -8,7 +8,7 @@ var library =  {
       openinghours: {opens: "10:00", closes: "20:00"} 
 };
 
-var outputText = library.name;
+var outputText = library.name + "<br>" + "Opening times today: " + library.openinghours.opens + " - " + library.openinghours.closes;
 
 document.getElementById("pOutput").innerHTML = outputText;
 
