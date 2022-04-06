@@ -11,6 +11,10 @@ function translateToSwedish() {
     translateTo("swedish");
 }
 
+function translateToGerman(){
+    translateTo("german")
+}
+
 function translateTo(language) {
     var givenWord = document.getElementById("txtEnglishWord").value;
     givenWord = givenWord.toLowerCase();
@@ -25,7 +29,11 @@ function translateTo(language) {
             
             if (language === "finnish") {
                 outputText = wordArray[index].finnishWord;
-            } else {
+            } 
+            else if(language === "german"){
+                outputText = wordArray[index].germanWord;
+            }
+            else {
                 outputText = wordArray[index].swedishWord;
             }
         }
@@ -37,9 +45,9 @@ function translateTo(language) {
 // This array is created when the HTML page is loaded
 // Note: The array is initialised with three object literals.
 var wordArray = [ 
-    { englishWord: "cat", finnishWord: "kissa", swedishWord: "katt" },
-    { englishWord: "dog", finnishWord: "koira", swedishWord: "hund" },
-    { englishWord: "bird", finnishWord: "lintu", swedishWord: "fågel" }
+    { englishWord: "cat", finnishWord: "kissa", swedishWord: "katt" , germanWord: "katze" },
+    { englishWord: "dog", finnishWord: "koira", swedishWord: "hund", germanWord: "hund" },
+    { englishWord: "bird", finnishWord: "lintu", swedishWord: "fågel", germanWord: "vogel" }
 ];
 
 // End
