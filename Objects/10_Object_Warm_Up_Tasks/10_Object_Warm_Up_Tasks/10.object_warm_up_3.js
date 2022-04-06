@@ -39,7 +39,10 @@ function translateTo(language) {
 var wordArray = [ 
     { englishWord: "cat", finnishWord: "kissa", swedishWord: "katt" },
     { englishWord: "dog", finnishWord: "koira", swedishWord: "hund" },
-    { englishWord: "bird", finnishWord: "lintu", swedishWord: "fågel" }
+    { englishWord: "bird", finnishWord: "lintu", swedishWord: "fågel" },
+    { englishWord: "fox", finnishWord: "kettu", swedishWord: "räv" },
+    { englishWord: "tea", finnishWord: "tee", swedishWord: "te" },
+    { englishWord: "book", finnishWord: "kirja", swedishWord: "bok" },
 ];
 
 // End
