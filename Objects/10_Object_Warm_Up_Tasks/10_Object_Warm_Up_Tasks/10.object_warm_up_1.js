@@ -4,7 +4,7 @@
 
 var country = {name: "Finland", population: 5501043};
 
-var outputText = country.name;
+var outputText = country.population;
 
 document.getElementById("pOutput").innerHTML = outputText;
 
