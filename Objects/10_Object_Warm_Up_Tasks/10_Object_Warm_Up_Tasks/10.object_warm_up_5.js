@@ -45,7 +45,7 @@ function showLibraryInfo(jsonText) {
                 libraryObject.items[0].schedules[0].opens + " - " +
                 libraryObject.items[0].schedules[0].closes;
         }
-        
+        outputText+= "<BR> <a href = " + libraryObject.items[0].homepage.fi;
     document.getElementById("pOutput").innerHTML = outputText;
 }
 
