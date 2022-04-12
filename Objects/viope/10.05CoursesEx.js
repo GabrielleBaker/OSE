@@ -21,13 +21,17 @@ var courses = [
         timing : "3.semester"
           }
     ];
-    console.log(courses);
+    var outputtext = "";
+    var stringy = JSON.stringify(courses);
 function listCourses() {
-    for(i = 0; i <=courses.length; i++){
-        //var code = 
+    for(i = 0; i < courses.length; i++){
+        outputtext += 
+        "<p>" + courses[i] + "</p>";
+        
+        
     }
     // List courses from an object array , i is an index of array
-    
+    document.getElementById("answer").innerHTML= outputtext;
     // Write the answer on the page, to the answer div, as content of the div
     
 }
