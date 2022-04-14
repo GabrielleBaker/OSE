@@ -7,7 +7,9 @@
 function Department(deptno, deptname) {
     this.number = deptno;
     this.name = deptname;
-    
+    this.toString = function(){
+        return this.number + this.name;
+    }
     // INSERT YOUR CODE HERE
     
     
